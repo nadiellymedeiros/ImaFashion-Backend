@@ -12,7 +12,7 @@ CREATE TABLE produtos (
 
 INSERT INTO produtos ( name, code, price, quantity, size)
 VALUES
-	('Calça Jeans', 1, 199.00, 1, 'M' ),
+	('Blusa Manga Longa Branca', 1, 199.00, 1, 'M' ),
 	('Vestido Floral', 2, 150.00, 1, 'M'),
 	('Blusa Branca', 3, 90.00, 1, 'M');
 	
