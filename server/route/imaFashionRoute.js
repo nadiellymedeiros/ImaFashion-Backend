@@ -1,9 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const imaFashionService = require("../service/imaFashionService");
-const { v4: uuidv4 } = require("uuid");
-
-const shoppingCar = [];
 
 router.post("/carrinhodecompras", async function (req, res) {
   const novoProduto = req.body;

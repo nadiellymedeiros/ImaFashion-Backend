@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS produtos;
 
 CREATE TABLE produtos (
+	produtos_id_pedido	INTEGER			REFERENCES pedido(id_pedido)
 	id			SERIAL			,
 	name		VARCHAR(100)	NOT NULL,
 	code		INTEGER			NOT NULL UNIQUE,

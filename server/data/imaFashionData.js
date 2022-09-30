@@ -2,7 +2,7 @@ const db = require("../infra/connection");
 
 exports.insertProduto = function (produto) {
   db.none(
-    "INSERT INTO produtos (name, code, price, quantity, size) VALUES ($1, $2, $3, $4, $5)",
+    "INSERT INTO produtos (produtos_id_pedido, name, code, price, quantity, size) VALUES (1001, $1, $2, $3, $4, $5)",
     [produto.name, produto.code, produto.price, produto.quantity, produto.size]
   );
 };
