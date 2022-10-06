@@ -1,4 +1,5 @@
 const express = require("express");
+const { mandarMensagem } = require("../twilio");
 const router = express.Router();
 const imaFashionService = require("../service/imaFashionService");
 
@@ -63,6 +64,21 @@ router.delete("/carrinhodecompras/:code", (req, res) => {
   imaFashionService.deleteProduto(code);
 
   return res.status(200).send("Produto removido com sucesso!");
+});
+
+router.post("/sendmessage", (req, res) => {
+  const { nomeCliente, id_pedido } = req.body;
+
+  // mandar mensagem
+  mandarMensagem(`
+    Olá, ${nomeCliente}.
+    Seu pedido de número ${id_pedido} foi concluído com sucesso!
+  `)
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+
+  // mandar ok
+  return res.status(200).send("boa compras!");
 });
 
 module.exports = router;
