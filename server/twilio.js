@@ -1,5 +1,5 @@
 const accountSid = "ACfca2bdb4587161b674bea132b2bdab3d";
-const authToken = "f392fcb3216cc2ac2513bfefbc1696b4";
+const authToken = "fad3ae3a622bad74a9f5335e6622345b";
 const client = require("twilio")(accountSid, authToken);
 
 exports.mandarMensagem = (body) => {
